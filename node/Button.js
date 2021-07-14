@@ -1,4 +1,5 @@
 
-export default function Button(title, callback){
-	return `<input type='button' onclick="${callback()}" name='button' value='${title}'>`;
+export default function Button(title, callback, id){
+	return `<input type='button' class='btn' onclick="${callback(id)}" name='button' value='${title}'>`;
+	//return `<input type='button' class='btn' onclick='${()=>callback(id)}' name='button' value='${title}'>`;
 }

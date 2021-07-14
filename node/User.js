@@ -1,13 +1,24 @@
-export default class User{
+import Button from "./Button.js";
 
-	constructor(name, id){
-		this.name = name;
-		this.id = id;
+export default function User({id, name, dept}){
+	const editClick = (id)=>{
+		console.log(`edit buttion in action: ${id}`);
+		return `alert('edit id:${id}')`;
+	}
+	
+	const deleteClick = (id)=>{
+		console.log('Delete buttion in action: '+id);
+		return `alert('delete id:${id}')`;
 	}
 
-	getName(){
-		return this.name;
-	}
+	return (
+		`<tr>
+			<td>${id}</td>
+			<td>${name}</td>
+			<td>${dept}</td>
+			<td>
+				${ Button('Edit', editClick, id)} | ${ Button('Delete', deleteClick, id)}
+			</td>
+		</tr>`
+	);
 }
-
-//export const id =10;
