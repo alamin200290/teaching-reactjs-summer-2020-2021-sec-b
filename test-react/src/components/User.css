@@ -1,0 +1,17 @@
+.user{
+    margin: 5px;
+    padding: 5px;
+    background-color: aqua;
+    width: 150px;
+    height: 90px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+h3{
+    margin: 0px;
+}
+
+p{
+    margin: 0px;
+}
