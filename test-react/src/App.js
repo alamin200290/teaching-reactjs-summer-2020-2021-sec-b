@@ -15,6 +15,10 @@ function App() {
     setUsers(data);
   }
 
+  const adduser = (user)=>{
+      setUsers([...myuser, user]);
+  }
+
   return (
    
     <Router>
@@ -29,7 +33,7 @@ function App() {
           </div>
         </Route>
         <Route path='/Create'>
-            <AddUser status='add'/>
+            <AddUser status='add' addcallback={adduser}/>
         </Route>
         <Route path='/edit/:id' children={<AddUser status='edit'/>}></Route>
         <Route path='*'>
