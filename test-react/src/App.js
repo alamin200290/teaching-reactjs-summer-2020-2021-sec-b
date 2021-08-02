@@ -3,12 +3,15 @@ import UserList from './components/UserList';
 import Navbar from './components/Navbar';
 import AddUser from './components/AddUser';
 import {users} from './usersData';
+import { useFetch } from './components/useFetch';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   
-  const [myuser, setUsers] = useState(users);
+  const [myuser, setUsers] = useState([]);
+  const url = 'https://jsonplaceholder.typicode.com/posts';
+  useFetch(url, setUsers);
 
   const deleteCallback = (id)=>{
     const data = myuser.filter((user)=>user.id !== id);

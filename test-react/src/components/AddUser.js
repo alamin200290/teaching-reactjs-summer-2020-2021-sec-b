@@ -46,10 +46,3 @@ const AddUser = ({status, addcallback})=>{
 }
 
 export default AddUser;
-
-
-//insert
-//update
-//delete
-//selectAll,
-//selectbyID
